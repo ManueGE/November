@@ -10,7 +10,7 @@ import Foundation
 
 extension NSDateFormatter {
     
-    private enum Configuration: DateFormatterConfiguration {
+    private enum Configuration: DateFormatterProvider {
         
         case style(dateStyle: NSDateFormatterStyle, timeStyle: NSDateFormatterStyle)
         case template(String)
