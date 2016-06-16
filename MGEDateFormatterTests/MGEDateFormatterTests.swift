@@ -7,12 +7,24 @@
 //
 
 import XCTest
+@testable import MGEDateFormatter
 
 class MGEDateFormatterTests: XCTestCase {
     
+    let date: NSDate = {
+       
+        let components = NSDateComponents()
+        components.day = 18
+        components.month = 11
+        components.year = 1983
+        components.hour = 11
+        components.minute = 30
+        return NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!.dateFromComponents(components)!
+        
+    }()
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
@@ -20,16 +32,30 @@ class MGEDateFormatterTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
+    func testDateFormatConfigurator() {
+        
+        class MyConfigurator: DateFormatterConfiguration {
+            let cacheKey: String
+            let format: String
+            
+            init(format: String) {
+                self.format = format
+                self.cacheKey = "MyConfigurator(\(format))"
+            }
+            
+            func configure(formatter: NSDateFormatter) {
+                formatter.dateFormat = format
+                formatter.monthSymbols = ["EN", "FB", "MZ", "AB", "MY", "JN", "JL", "AG", "SP", "OT", "NV", "DC"]
+                formatter.shortWeekdaySymbols = ["D", "L", "M", "X", "J", "V", "S", "D"]
+                formatter.weekdaySymbols = ["Dom", "Lun", "Mar", "Mie", "Jue", "Vie", "Sab"]
+            }
         }
+        
+        let configurator = MyConfigurator(format: "dd MMMM yyyy hh:mm:ss")
+        
+        XCTAssertEqual(date.string(with: configurator), "18 NV 1983 11:30:00", "conversion failed")
+        XCTAssertNil(NSDate(string: "", configurator: configurator), "date should be nil")
+        XCTAssertEqualWithAccuracy(NSDate(string: "18 NV 1983 11:30:00", configurator: configurator)!.timeIntervalSince1970, date.timeIntervalSince1970, accuracy: 0.001, "conversion failed")
+        
     }
-    
 }

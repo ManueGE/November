@@ -22,14 +22,11 @@ internal extension NSDateFormatter {
         if let formatter = formatters[configuration.cacheKey] {
             return formatter
         }
-            
-        else {
-            
-            let formatter = NSDateFormatter()
-            configuration.configure(formatter)
-            formatters[configuration.cacheKey] = formatter
-            return formatter
-        }
+        
+        let formatter = NSDateFormatter()
+        configuration.configure(formatter)
+        formatters[configuration.cacheKey] = formatter
+        return formatter
     }
 }
 
