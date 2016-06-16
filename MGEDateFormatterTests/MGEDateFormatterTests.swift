@@ -11,7 +11,8 @@ import XCTest
 
 class MGEDateFormatterTests: XCTestCase {
     
-    let template = "ddMMMyyyyHHmm"
+    let template = "ddMMMMyyyyHHmm"
+    let format = "dd/MMMM/yyyy HH:mm"
     
     let spanishLocale = NSLocale(localeIdentifier: "es")
     let date: NSDate = {
@@ -88,23 +89,53 @@ class MGEDateFormatterTests: XCTestCase {
     // MARK: Template
     func testDateToStringWithTemplate() {
         let string = date.string(withTemplate: template)
-        XCTAssertEqual(string, "Nov 18, 1983, 11:30", "conversion failed")
+        XCTAssertEqual(string, "November 18, 1983, 11:30", "conversion failed")
     }
     
     func testStringToDateWithTemplate() {
-        let string = "Nov 18, 1983, 11:30"
+        let string = "November 18, 1983, 11:30"
          let convertedDate = NSDate(string: string, template: template)
         XCTAssertEqualWithAccuracy(convertedDate!.timeIntervalSince1970, date.timeIntervalSince1970, accuracy: 0.001, "conversion failed")
     }
     
     func testDateToStringWithLocalizedTemplate() {
         let string = date.string(withTemplate: template, locale: spanishLocale)
-        XCTAssertEqual(string, "nov 18, 1983, 11:30", "conversion failed")
+        XCTAssertEqual(string, "noviembre 18, 1983, 11:30", "conversion failed")
     }
     
     func testStringToDateWithLocalizedTemplate() {
-        let string = "Nov 18, 1983, 11:30"
+        let string = "noviembre 18, 1983, 11:30"
         let convertedDate = NSDate(string: string, template: template, locale: spanishLocale)
         XCTAssertEqualWithAccuracy(convertedDate!.timeIntervalSince1970, date.timeIntervalSince1970, accuracy: 0.001, "conversion failed")
+    }
+    
+    // MARK: Format
+    func testDateToStringWithFormat() {
+        let string = date.string(withFormat: format)
+        XCTAssertEqual(string, "18/November/1983 11:30", "conversion failed")
+    }
+    
+    func testStringToDateWithFormat() {
+        let string = "18/November/1983 11:30"
+        let convertedDate = NSDate(string: string, format: format)
+        XCTAssertEqualWithAccuracy(convertedDate!.timeIntervalSince1970, date.timeIntervalSince1970, accuracy: 0.001, "conversion failed")
+    }
+    
+    func testDateToStringWithLocalizedFormat() {
+        let string = date.string(withFormat: format, locale: spanishLocale)
+        XCTAssertEqual(string, "18/noviembre/1983 11:30", "conversion failed")
+    }
+    
+    func testStringToDateWithLocalizedFormat() {
+        let string = "18/noviembre/1983 11:30"
+        let convertedDate = NSDate(string: string, format: format, locale: spanishLocale)
+        XCTAssertEqualWithAccuracy(convertedDate!.timeIntervalSince1970, date.timeIntervalSince1970, accuracy: 0.001, "conversion failed")
+    }
+    
+    // Fail test
+    func testStringToDateFail() {
+        let string = ""
+        let convertedDate = NSDate(string: string, format: format, locale: spanishLocale)
+        XCTAssertNil(convertedDate, "")
     }
 }

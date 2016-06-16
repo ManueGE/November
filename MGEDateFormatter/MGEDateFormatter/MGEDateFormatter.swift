@@ -64,10 +64,6 @@ extension NSDateFormatter {
             }
         }
     }
-    
-    private static func formatter(withConfiguration configuration: Configuration) -> NSDateFormatter {
-        return formatter(withConfiguration: configuration)
-    }
 }
 
 extension NSDate {
