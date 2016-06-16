@@ -1,14 +1,14 @@
 # MGEDateFormatter
 
-**MGEDateFormatter** provides a set of extensions and to NSDate and NSDateFormatter to build a nice API which simplify the conversion of NSDate to NSString and back. 
+**MGEDateFormatter** provides a set of extensions to NSDate and NSDateFormatter to build a nice API which simplify the conversion from NSDate to NSString and back. 
 
 Creating a `NSDateFormatter` is an expensive task. For this reason, **MGEDateFormatter** takes care of caching the created `NSDateFormatter` in order to reuse them along the lifecycle of your app.
 
 ## Installing MGEDateFormatter
 
-##### Using CocoaPods
+#### Using CocoaPods
 
-Add one of more of the following to your `Podfile`:
+Add the following to your `Podfile`:
 
 ````
 pod 'MGEDateFormatter'
@@ -30,7 +30,7 @@ If you don’t have CocoaPods installed or integrated into your project, you can
 
 There are three main ways to convert a `NSDate` to a `String`. 
 
-###### Using NSDateFormatterStyle
+##### Using NSDateFormatterStyle
 
 ````
 let date = NSDate()
@@ -45,7 +45,7 @@ let date = NSDate()
 let string = date.string(withDateStyle: .MediumStyle, timeStyle: .NoStyle, locale: spanishLocale)
 ````
 
-###### Using format from template
+##### Using format from template
 ````
 let date = NSDate()
 let string = date.string(withTemplate: "MMMyyyy")
@@ -59,7 +59,7 @@ let date = NSDate()
 let string = date.string(withTemplate: "MMMyyyy", locale: spanishLocale)
 ````
 
-###### Using date format
+##### Using date format
 ````
 let date = NSDate()
 let string = date.string(withFormat: "MM/dd/yyyy HH:mm:ss")
@@ -76,9 +76,9 @@ let string = date.string(withFormat: "MM/dd/yyyy HH:mm:ss", locale: spanishLocal
 
 ### String to NSDate
 
-In the same way, there is as well three equivalent ways to create a `NSDate` from a `String`. The thee of them come as `NSDate` initializers:
+In the same way, there are three ways to create a `NSDate` from a `String`. The thee of them are provided as `NSDate` initializers:
 
-###### Using NSDateFormatterStyle
+##### Using NSDateFormatterStyle
 
 ````
 let string = "11/18/83, 11:30 AM"
@@ -94,7 +94,7 @@ let string = "18/11/83 11:30"
 let convertedDate = NSDate(string: string, dateStyle: .ShortStyle, timeStyle: .ShortStyle, locale: spanishLocale)
 ````
 
-###### Using format from template
+##### Using format from template
 ````
 let string = "November 18, 1983, 11:30"
 let convertedDate = NSDate(string: string, template: "ddMMMMyyyyHHmm")
@@ -109,7 +109,7 @@ let string = "noviembre 18, 1983, 11:30"
 let convertedDate = NSDate(string: string, template: "ddMMMMyyyyHHmm", locale: spanishLocale)
 ````
 
-###### Using date format
+##### Using date format
 ````
 let string = "18/November/1983 11:30"
 let convertedDate = NSDate(string: string, format: "dd/MMMM/yyyy HH:mm")
@@ -128,7 +128,7 @@ let convertedDate = NSDate(string: string, format: "dd/MMMM/yyyy HH:mm", locale:
 
 In my own apps, I like to use **MGEDateFormatter** in this way: 
 
-###### 1- Create a `enum` with my date formatter templates and/or formats: 
+##### 1- Create a `enum` with my date formatter templates and/or formats: 
 
 Usually I have just a set of few templates and/or formats to use. I wrap them into a couple of `enum`:
 
@@ -144,9 +144,9 @@ enum DateFormat: String {
 }
 ````
 
-##### 2- Create a `NSDate` extension:
+#### 2- Create a `NSDate` extension:
 
-I create an extension that perform the conversion directly by passing values of the defined `enum`:
+I create an extension that wraps the `MGEDateFormatter` methods to accept values of the defined `enum`:
 
 ````
 extension NSDate {
@@ -174,7 +174,7 @@ extension NSDate {
 ````
 
 
-##### 3- Call the methods from the extension:
+#### 3- Call the methods from the extension:
 
 Now, we have a nice, swifty, simple API to convert dates to strings and back: 
 
@@ -185,9 +185,13 @@ let date = NSDate()
 let monthAndYearString = date.string(with: .monthAndYear)
 let fullShortDateString = date.string(with: .fullShortDate)
 
+let dateFromMonthAndYear = NSDate(string: "11/1983", template: .monthAndYear)
+
 // Formats
 let fullDateString = date.string(with: .fullDate)
 let fullDateAndTimeString = date.string(with: .fullDateAndTime)
+
+let dateFromfullDateString = NSDate(string: "11/18/1983", format: .fullDate)
 ````
 
 
