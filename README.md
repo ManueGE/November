@@ -4,6 +4,14 @@
 
 Creating a `NSDateFormatter` is an expensive task. For this reason, **MGEDateFormatter** takes care of caching the created `NSDateFormatter` in order to reuse them along the lifecycle of your app.
 
+The aim of this project is to have a nice API to get strings representations from `NSDate` instaces:
+
+````
+let monthAndYearString = date.string(with: .monthAndYear)
+````
+
+Keep reading to know how!
+
 ## Installing MGEDateFormatter
 
 #### Using CocoaPods
