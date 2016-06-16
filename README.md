@@ -1,6 +1,6 @@
 # MGEDateFormatter
 
-**MGEDateFormatter** provides a set of extensions and to NSDate and NSDateFormatter to build a nice API whch simplify the conversion of NSDate to NSString and back. 
+**MGEDateFormatter** provides a set of extensions and to NSDate and NSDateFormatter to build a nice API which simplify the conversion of NSDate to NSString and back. 
 
 Creating a `NSDateFormatter` is an expensive task. For this reason, **MGEDateFormatter** takes care of caching the created `NSDateFormatter` in order to reuse them along the lifecycle of your app.
 
@@ -42,7 +42,7 @@ if needed, you can provide a custom location to perform the conversion:
 ````
 let spanishLocale = NSLocale(localeIdentifier: "es")
 let date = NSDate()
-let strign = date.string(withDateStyle: .MediumStyle, timeStyle: .NoStyle, locale: spanishLocale)
+let string = date.string(withDateStyle: .MediumStyle, timeStyle: .NoStyle, locale: spanishLocale)
 ````
 
 ###### Using format from template
@@ -56,7 +56,7 @@ if needed, you can provide a custom location to perform the conversion:
 ````
 let spanishLocale = NSLocale(localeIdentifier: "es")
 let date = NSDate()
-let strign = date.string(withTemplate: "MMMyyyy", locale: spanishLocale)
+let string = date.string(withTemplate: "MMMyyyy", locale: spanishLocale)
 ````
 
 ###### Using date format
@@ -70,7 +70,7 @@ if needed, you can provide a custom location to perform the conversion:
 ````
 let spanishLocale = NSLocale(localeIdentifier: "es")
 let date = NSDate()
-let strign = date.string(withFormat: "MM/dd/yyyy HH:mm:ss", locale: spanishLocale)
+let string = date.string(withFormat: "MM/dd/yyyy HH:mm:ss", locale: spanishLocale)
 ````
 
 
@@ -192,6 +192,58 @@ let fullDateAndTimeString = date.string(with: .fullDateAndTime)
 
 
 ### Custom formatters
+
+Aren't the three methods provided to format strings enough for you? Don't worry, you can still take advantage of **MGEDateFormatter**. 
+
+If you want to add further customization to your formatter, you can use the `DateFormatterProvider` protocol. 
+
+To conform this protocol you have to override a property (`cacheKey`) and a function (`configure(_: NSDateFormatter)`). Here you have an example: 
+
+
+````
+class MyDateFormatterProvider: DateFormatterProvider {
+    let cacheKey: String
+    let format: String
+    
+    init(format: String) {
+        self.format = format
+        self.cacheKey = "MyConfigurator(\(format))"
+    }
+    
+    func configure(formatter: NSDateFormatter) {
+        formatter.dateFormat = format
+        formatter.monthSymbols = ["JN", "FB", "MR", "AP", "MY", "JN", "JL", "AG", "SP", "OT", "NV", "DC"]
+        // whatever configuration you need
+    }
+}
+
+````
+
+and then, later:
+
+````
+let myProvider = MyDateFormatterProvider(format: "dd MMMM yyyy")
+
+// from date to string
+let date = NSDate()
+let myCustomFormatString = date.string(with: myProvider)
+
+// from string to date
+let string = "18 NV 1983"
+let convertedDate = NSDate(string: string, provider: myProvider)
+
+````
+The `NSDateFormatter` used to serialize the `NSDate` or the `String` will be cached under the defined `cacheKey` and will be nicely reused if it is needed again. In other words, if in any other point of the app we create a new provider with the same format as this
+
+````
+let otherProvider = MyDateFormatterProvider(format: "dd MMMM yyyy")
+
+// from date to string
+let otherDate = NSDate()
+let otherCustomFormatString = date.string(with: otherProvider)
+````
+
+the `NSDateFormatter` will be reused.
 
 ---
 
