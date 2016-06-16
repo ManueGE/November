@@ -103,7 +103,7 @@ class MGEDateFormatterTests: XCTestCase {
     
     func testStringToDateWithTemplate() {
         let string = "November 18, 1983, 11:30"
-         let convertedDate = NSDate(string: string, template: template)!
+        let convertedDate = NSDate(string: string, template: template)!
         XCTAssertEqualWithAccuracy(convertedDate.timeIntervalSince1970, date.timeIntervalSince1970, accuracy: 0.001, "conversion failed")
     }
     
