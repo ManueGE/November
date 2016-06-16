@@ -10,16 +10,37 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var dateLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        dateLabel.text = NSDate().string(withDateStyle: .LongStyle, timeStyle: .ShortStyle)
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func didPressStyle(sender: AnyObject) {
+        dateLabel.text = NSDate().string(withDateStyle: .LongStyle, timeStyle: .ShortStyle)
     }
-
-
+    
+    @IBAction func didPressTemplateFullShort(sender: AnyObject) {
+        dateLabel.text = NSDate().string(with: .fullShortDate)
+    }
+    
+    @IBAction func didPressTemplateMonthAndYear(sender: AnyObject) {
+        dateLabel.text = NSDate().string(with: .monthAndYear)
+    }
+    
+    @IBAction func didPressFormatFullDate(sender: AnyObject) {
+        dateLabel.text = NSDate().string(with: .fullDate)
+    }
+    
+    @IBAction func didPressFormatFullDateAndTime(sender: AnyObject) {
+        dateLabel.text = NSDate().string(with: .fullDateAndTime)
+    }
+    
+    @IBAction func didPressCustom(sender: AnyObject) {
+        let myProvider = MyDateFormatterProvider(format: "MMMM yyyy")
+        dateLabel.text = NSDate().string(with: myProvider)
+    }
 }
 
