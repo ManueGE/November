@@ -20,6 +20,6 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
   spec.framework = "Foundation"
 
-  lite.source_files = "MGEDateFormatter/MGEDateFormatter/*.{swift}"
+  spec.source_files = "MGEDateFormatter/MGEDateFormatter/*.{swift}"
 
 end
