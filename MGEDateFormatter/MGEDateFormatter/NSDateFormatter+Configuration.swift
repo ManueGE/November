@@ -69,7 +69,7 @@ extension NSDateFormatter {
     }
 }
 
-extension NSDate {
+public extension NSDate {
     
     // MARK: Base
     private func string(with configuration: NSDateFormatter.Configuration) -> String {
@@ -92,7 +92,7 @@ extension NSDate {
      - parameter locale: The locale used to perform the conversion. Default is `nil`, so the default location for `NSDateFormatter` will be used
      - returns: the string representation for the date using the given dateStyle, timeStyle and locale
      */
-    func string(withDateStyle dateStyle: NSDateFormatterStyle, timeStyle: NSDateFormatterStyle, locale: NSLocale? = nil) -> String {
+    public func string(withDateStyle dateStyle: NSDateFormatterStyle, timeStyle: NSDateFormatterStyle, locale: NSLocale? = nil) -> String {
         if let locale = locale {
             return string(with: .localizedStyle(dateStyle: dateStyle, timeStyle: timeStyle, locale: locale))
         }
@@ -108,7 +108,7 @@ extension NSDate {
      - parameter locale: The locale used to perform the conversion. Default is `nil`, so the default location for `NSDateFormatter` will be used
      - returns: the string representation for the date using the given template and locale
      */
-    func string(withTemplate template: String, locale: NSLocale? = nil) -> String {
+    public func string(withTemplate template: String, locale: NSLocale? = nil) -> String {
         if let locale = locale {
             return string(with: .localizedTemplate(template: template, locale: locale))
         }
@@ -124,7 +124,7 @@ extension NSDate {
      - parameter locale: The locale used to perform the conversion. Default is `nil`, so the default location for `NSDateFormatter` will be used
      - returns: the string representation for the date using the given format and locale
      */
-    func string(withFormat format: String, locale: NSLocale? = nil) -> String {
+    public func string(withFormat format: String, locale: NSLocale? = nil) -> String {
         if let locale = locale {
             return string(with: .localizedFormat(format: format, locale: locale))
         }
@@ -143,7 +143,7 @@ extension NSDate {
      - parameter locale: The locale used to perform the conversion. Default is `nil`, so the default location for `NSDateFormatter` will be used
      - returns: the date instantiated with the given dateStyle, timeStyle and locale. Will return `nil` if the string couldn't be parsed
      */
-    convenience init?(string: String, dateStyle: NSDateFormatterStyle, timeStyle: NSDateFormatterStyle, locale: NSLocale? = nil) {
+    public convenience init?(string: String, dateStyle: NSDateFormatterStyle, timeStyle: NSDateFormatterStyle, locale: NSLocale? = nil) {
         if let locale = locale {
             self.init(string: string, configuration: .localizedStyle(dateStyle: dateStyle, timeStyle: timeStyle, locale: locale))
         }
@@ -159,7 +159,7 @@ extension NSDate {
      - parameter locale: The locale used to perform the conversion. Default is `nil`, so the default location for `NSDateFormatter` will be used
      - returns: the date instantiated with the given template and locale. Will return `nil` if the string couldn't be parsed
      */
-    convenience init?(string: String, template: String, locale: NSLocale? = nil) {
+    public convenience init?(string: String, template: String, locale: NSLocale? = nil) {
         if let locale = locale {
             self.init(string: string, configuration: .localizedTemplate(template: template, locale: locale))
         }
@@ -175,7 +175,7 @@ extension NSDate {
      - parameter locale: The locale used to perform the conversion. Default is `nil`, so the default location for `NSDateFormatter` will be used
      - returns: the date instantiated with the given format and locale. Will return `nil` if the string couldn't be parsed
      */
-    convenience init?(string: String, format: String, locale: NSLocale? = nil) {
+    public convenience init?(string: String, format: String, locale: NSLocale? = nil) {
         if let locale = locale {
             self.init(string: string, configuration: .localizedFormat(format: format, locale: locale))
         }

@@ -12,7 +12,7 @@ import Foundation
  A protocol that must conform the objects that can provide a `NSDateFormatter`. The formatters created 
  by instances of this protocol are chached using the `cacheKey` parameter.
  */
-protocol DateFormatterProvider {
+public protocol DateFormatterProvider {
     /// The name used to cache the formatter. It should be unique for each formatter.
     var cacheKey: String { get }
     
@@ -45,7 +45,7 @@ internal extension NSDateFormatter {
     }
 }
 
-extension NSDate {
+public extension NSDate {
     
     // MARK: String from date
     
