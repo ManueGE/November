@@ -9,7 +9,7 @@
 import XCTest
 @testable import MGEDateFormatter
 
-class MyConfigurator: DateFormatterConfiguration {
+class MyConfigurator: DateFormatterProvider {
     let cacheKey: String
     let format: String
     
@@ -62,13 +62,13 @@ class MGEDateFormatterTests: XCTestCase {
     
     func testStringToDateWithConfigurator() {
         let string = "18 NV 1983 11:30:00"
-        let convertedDate = NSDate(string: string, configurator: configurator)!
+        let convertedDate = NSDate(string: string, provider: configurator)!
         XCTAssertEqualWithAccuracy(convertedDate.timeIntervalSince1970, date.timeIntervalSince1970, accuracy: 0.001, "conversion failed")
     }
     
     func testStringToDateFailWithConfigurator() {
         let string = ""
-        let convertedDate = NSDate(string: string, configurator: configurator)
+        let convertedDate = NSDate(string: string, provider: configurator)
          XCTAssertNil(convertedDate, "date should be nil")
     }
     
@@ -103,7 +103,7 @@ class MGEDateFormatterTests: XCTestCase {
     
     func testStringToDateWithTemplate() {
         let string = "November 18, 1983, 11:30"
-         let convertedDate = NSDate(string: string, template: template)!
+        let convertedDate = NSDate(string: string, template: template)!
         XCTAssertEqualWithAccuracy(convertedDate.timeIntervalSince1970, date.timeIntervalSince1970, accuracy: 0.001, "conversion failed")
     }
     

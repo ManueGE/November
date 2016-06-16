@@ -12,9 +12,10 @@
 		32AD12CF1D12FF79005A1677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32AD12CD1D12FF79005A1677 /* Main.storyboard */; };
 		32AD12D11D12FF79005A1677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32AD12D01D12FF79005A1677 /* Assets.xcassets */; };
 		32AD12D41D12FF79005A1677 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32AD12D21D12FF79005A1677 /* LaunchScreen.storyboard */; };
-		32AD12E01D130052005A1677 /* DateFormatterConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12DF1D130052005A1677 /* DateFormatterConfigurator.swift */; };
-		32AD12E21D1300E7005A1677 /* MGEDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12E11D1300E7005A1677 /* MGEDateFormatter.swift */; };
+		32AD12E01D130052005A1677 /* DateFormatterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12DF1D130052005A1677 /* DateFormatterProvider.swift */; };
+		32AD12E21D1300E7005A1677 /* NSDateFormatter+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12E11D1300E7005A1677 /* NSDateFormatter+Configuration.swift */; };
 		32AD12EA1D130254005A1677 /* MGEDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12E91D130254005A1677 /* MGEDateFormatterTests.swift */; };
+		32AD12F21D132853005A1677 /* NSDate+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12F11D132853005A1677 /* NSDate+App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +36,12 @@
 		32AD12D01D12FF79005A1677 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32AD12D31D12FF79005A1677 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32AD12D51D12FF79005A1677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		32AD12DF1D130052005A1677 /* DateFormatterConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterConfigurator.swift; sourceTree = "<group>"; };
-		32AD12E11D1300E7005A1677 /* MGEDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGEDateFormatter.swift; sourceTree = "<group>"; };
+		32AD12DF1D130052005A1677 /* DateFormatterProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterProvider.swift; sourceTree = "<group>"; };
+		32AD12E11D1300E7005A1677 /* NSDateFormatter+Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDateFormatter+Configuration.swift"; sourceTree = "<group>"; };
 		32AD12E71D130254005A1677 /* MGEDateFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MGEDateFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AD12E91D130254005A1677 /* MGEDateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGEDateFormatterTests.swift; sourceTree = "<group>"; };
 		32AD12EB1D130254005A1677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32AD12F11D132853005A1677 /* NSDate+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+App.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 			children = (
 				32AD12C91D12FF79005A1677 /* AppDelegate.swift */,
 				32AD12CB1D12FF79005A1677 /* ViewController.swift */,
+				32AD12F11D132853005A1677 /* NSDate+App.swift */,
 				32AD12DE1D130047005A1677 /* MGEDateFormatter */,
 				32AD12CD1D12FF79005A1677 /* Main.storyboard */,
 				32AD12D01D12FF79005A1677 /* Assets.xcassets */,
@@ -95,8 +98,8 @@
 		32AD12DE1D130047005A1677 /* MGEDateFormatter */ = {
 			isa = PBXGroup;
 			children = (
-				32AD12DF1D130052005A1677 /* DateFormatterConfigurator.swift */,
-				32AD12E11D1300E7005A1677 /* MGEDateFormatter.swift */,
+				32AD12DF1D130052005A1677 /* DateFormatterProvider.swift */,
+				32AD12E11D1300E7005A1677 /* NSDateFormatter+Configuration.swift */,
 			);
 			path = MGEDateFormatter;
 			sourceTree = "<group>";
@@ -211,9 +214,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32AD12E21D1300E7005A1677 /* MGEDateFormatter.swift in Sources */,
+				32AD12F21D132853005A1677 /* NSDate+App.swift in Sources */,
+				32AD12E21D1300E7005A1677 /* NSDateFormatter+Configuration.swift in Sources */,
 				32AD12CC1D12FF79005A1677 /* ViewController.swift in Sources */,
-				32AD12E01D130052005A1677 /* DateFormatterConfigurator.swift in Sources */,
+				32AD12E01D130052005A1677 /* DateFormatterProvider.swift in Sources */,
 				32AD12CA1D12FF79005A1677 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +417,7 @@
 				32AD12EF1D130254005A1677 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
