@@ -1,5 +1,5 @@
 //
-//  MGEDateFormatter.swift
+//  NSDateFormatter+Configuration.swift
 //  MGEDateFormatter
 //
 //  Created by Manu on 16/6/16.
@@ -10,6 +10,9 @@ import Foundation
 
 extension NSDateFormatter {
     
+    /**
+     Enum that implement the `DateFormatterProvider` protocol. Each case is used to adjust some properties of the `NSDateFormatter`
+     */
     private enum Configuration: DateFormatterProvider {
         
         case style(dateStyle: NSDateFormatterStyle, timeStyle: NSDateFormatterStyle)
@@ -69,7 +72,6 @@ extension NSDateFormatter {
 extension NSDate {
     
     // MARK: Base
-    
     private func string(with configuration: NSDateFormatter.Configuration) -> String {
         let formatter = NSDateFormatter.formatter(with: configuration)
         return formatter.stringFromDate(self)
@@ -83,6 +85,13 @@ extension NSDate {
     
     // MARK: String from date
     
+    /**
+     Returns a string representation for a given date using the given dateStyle, timeStyle and locale
+     - parameter dateStlye: The style used to convert the date
+     - parameter timeStyle: The style used to convert the time
+     - parameter locale: The locale used to perform the conversion. Default is `nil`, so the default location for `NSDateFormatter` will be used
+     - returns: the string representation for the date using the given dateStyle, timeStyle and locale
+     */
     func string(withDateStyle dateStyle: NSDateFormatterStyle, timeStyle: NSDateFormatterStyle, locale: NSLocale? = nil) -> String {
         if let locale = locale {
             return string(with: .localizedStyle(dateStyle: dateStyle, timeStyle: timeStyle, locale: locale))
@@ -93,6 +102,12 @@ extension NSDate {
         }
     }
     
+    /**
+     Returns a string representation for a given date using the given template and locale
+     - parameter template: The date format from a template using the specified locale
+     - parameter locale: The locale used to perform the conversion. Default is `nil`, so the default location for `NSDateFormatter` will be used
+     - returns: the string representation for the date using the given template and locale
+     */
     func string(withTemplate template: String, locale: NSLocale? = nil) -> String {
         if let locale = locale {
             return string(with: .localizedTemplate(template: template, locale: locale))
@@ -103,6 +118,12 @@ extension NSDate {
         }
     }
     
+    /**
+     Returns a string representation for a given date using the given format and locale
+     - parameter format: The date format used to convert the date
+     - parameter locale: The locale used to perform the conversion. Default is `nil`, so the default location for `NSDateFormatter` will be used
+     - returns: the string representation for the date using the given format and locale
+     */
     func string(withFormat format: String, locale: NSLocale? = nil) -> String {
         if let locale = locale {
             return string(with: .localizedFormat(format: format, locale: locale))
@@ -115,6 +136,13 @@ extension NSDate {
     
     // MARK: Date from string
     
+    /**
+     Returns a date instantiated with the given dateStyle, timeStyle and locale
+     - parameter dateStlye: The style used to convert the date
+     - parameter timeStyle: The style used to convert the time
+     - parameter locale: The locale used to perform the conversion. Default is `nil`, so the default location for `NSDateFormatter` will be used
+     - returns: the date instantiated with the given dateStyle, timeStyle and locale. Will return `nil` if the string couldn't be parsed
+     */
     convenience init?(string: String, dateStyle: NSDateFormatterStyle, timeStyle: NSDateFormatterStyle, locale: NSLocale? = nil) {
         if let locale = locale {
             self.init(string: string, configuration: .localizedStyle(dateStyle: dateStyle, timeStyle: timeStyle, locale: locale))
@@ -125,6 +153,12 @@ extension NSDate {
         }
     }
     
+    /**
+     Returns a date instantiated with the given template and locale
+     - parameter template: The date format from a template using the specified locale
+     - parameter locale: The locale used to perform the conversion. Default is `nil`, so the default location for `NSDateFormatter` will be used
+     - returns: the date instantiated with the given template and locale. Will return `nil` if the string couldn't be parsed
+     */
     convenience init?(string: String, template: String, locale: NSLocale? = nil) {
         if let locale = locale {
             self.init(string: string, configuration: .localizedTemplate(template: template, locale: locale))
@@ -135,6 +169,12 @@ extension NSDate {
         }
     }
     
+    /**
+     Returns a date instantiated with the given format and locale
+     - parameter format: The date format used to convert the date
+     - parameter locale: The locale used to perform the conversion. Default is `nil`, so the default location for `NSDateFormatter` will be used
+     - returns: the date instantiated with the given format and locale. Will return `nil` if the string couldn't be parsed
+     */
     convenience init?(string: String, format: String, locale: NSLocale? = nil) {
         if let locale = locale {
             self.init(string: string, configuration: .localizedFormat(format: format, locale: locale))
