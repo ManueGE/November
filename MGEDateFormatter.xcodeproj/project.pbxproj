@@ -14,7 +14,18 @@
 		32AD12D41D12FF79005A1677 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32AD12D21D12FF79005A1677 /* LaunchScreen.storyboard */; };
 		32AD12E01D130052005A1677 /* DateFormatterConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12DF1D130052005A1677 /* DateFormatterConfigurator.swift */; };
 		32AD12E21D1300E7005A1677 /* MGEDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12E11D1300E7005A1677 /* MGEDateFormatter.swift */; };
+		32AD12EA1D130254005A1677 /* MGEDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12E91D130254005A1677 /* MGEDateFormatterTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		32AD12EC1D130254005A1677 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32AD12BE1D12FF78005A1677 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32AD12C51D12FF78005A1677;
+			remoteInfo = MGEDateFormatter;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		32AD12C61D12FF79005A1677 /* MGEDateFormatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGEDateFormatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +37,20 @@
 		32AD12D51D12FF79005A1677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32AD12DF1D130052005A1677 /* DateFormatterConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterConfigurator.swift; sourceTree = "<group>"; };
 		32AD12E11D1300E7005A1677 /* MGEDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGEDateFormatter.swift; sourceTree = "<group>"; };
+		32AD12E71D130254005A1677 /* MGEDateFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MGEDateFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		32AD12E91D130254005A1677 /* MGEDateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGEDateFormatterTests.swift; sourceTree = "<group>"; };
+		32AD12EB1D130254005A1677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		32AD12C31D12FF78005A1677 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32AD12E41D130254005A1677 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				32AD12C81D12FF79005A1677 /* MGEDateFormatter */,
+				32AD12E81D130254005A1677 /* MGEDateFormatterTests */,
 				32AD12C71D12FF79005A1677 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				32AD12C61D12FF79005A1677 /* MGEDateFormatter.app */,
+				32AD12E71D130254005A1677 /* MGEDateFormatterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -78,6 +101,15 @@
 			path = MGEDateFormatter;
 			sourceTree = "<group>";
 		};
+		32AD12E81D130254005A1677 /* MGEDateFormatterTests */ = {
+			isa = PBXGroup;
+			children = (
+				32AD12E91D130254005A1677 /* MGEDateFormatterTests.swift */,
+				32AD12EB1D130254005A1677 /* Info.plist */,
+			);
+			path = MGEDateFormatterTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,6 +130,24 @@
 			productReference = 32AD12C61D12FF79005A1677 /* MGEDateFormatter.app */;
 			productType = "com.apple.product-type.application";
 		};
+		32AD12E61D130254005A1677 /* MGEDateFormatterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32AD12F01D130254005A1677 /* Build configuration list for PBXNativeTarget "MGEDateFormatterTests" */;
+			buildPhases = (
+				32AD12E31D130254005A1677 /* Sources */,
+				32AD12E41D130254005A1677 /* Frameworks */,
+				32AD12E51D130254005A1677 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32AD12ED1D130254005A1677 /* PBXTargetDependency */,
+			);
+			name = MGEDateFormatterTests;
+			productName = MGEDateFormatterTests;
+			productReference = 32AD12E71D130254005A1677 /* MGEDateFormatterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -110,6 +160,10 @@
 				TargetAttributes = {
 					32AD12C51D12FF78005A1677 = {
 						CreatedOnToolsVersion = 7.3.1;
+					};
+					32AD12E61D130254005A1677 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 32AD12C51D12FF78005A1677;
 					};
 				};
 			};
@@ -127,6 +181,7 @@
 			projectRoot = "";
 			targets = (
 				32AD12C51D12FF78005A1677 /* MGEDateFormatter */,
+				32AD12E61D130254005A1677 /* MGEDateFormatterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -139,6 +194,13 @@
 				32AD12D41D12FF79005A1677 /* LaunchScreen.storyboard in Resources */,
 				32AD12D11D12FF79005A1677 /* Assets.xcassets in Resources */,
 				32AD12CF1D12FF79005A1677 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32AD12E51D130254005A1677 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +218,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		32AD12E31D130254005A1677 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32AD12EA1D130254005A1677 /* MGEDateFormatterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		32AD12ED1D130254005A1677 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 32AD12C51D12FF78005A1677 /* MGEDateFormatter */;
+			targetProxy = 32AD12EC1D130254005A1677 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		32AD12CD1D12FF79005A1677 /* Main.storyboard */ = {
@@ -283,6 +361,30 @@
 			};
 			name = Release;
 		};
+		32AD12EE1D130254005A1677 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MGEDateFormatterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.manuege.MGEDateFormatterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MGEDateFormatter.app/MGEDateFormatter";
+			};
+			name = Debug;
+		};
+		32AD12EF1D130254005A1677 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MGEDateFormatterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.manuege.MGEDateFormatterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MGEDateFormatter.app/MGEDateFormatter";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -303,6 +405,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		32AD12F01D130254005A1677 /* Build configuration list for PBXNativeTarget "MGEDateFormatterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32AD12EE1D130254005A1677 /* Debug */,
+				32AD12EF1D130254005A1677 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
