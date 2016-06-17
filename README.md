@@ -14,9 +14,9 @@ let monthAndYearString = date.string(with: .monthAndYear)
 
 Keep reading to know how!
 
-## Installing MGEDateFormatter
+## Installation
 
-#### Using CocoaPods
+#### CocoaPods
 
 Add the following to your `Podfile`:
 
