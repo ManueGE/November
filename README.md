@@ -16,8 +16,6 @@ Keep reading to know how!
 
 ## Installation
 
-#### CocoaPods
-
 Add the following to your `Podfile`:
 
 ````
