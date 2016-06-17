@@ -7,6 +7,8 @@ Creating a `NSDateFormatter` is an expensive task. For this reason, **MGEDateFor
 The aim of this project is to have a nice API to get strings representations from `NSDate` instaces:
 
 ````
+let stringWithTemplate = date.string(withTemplate: "MMMMyyyy")
+let stringWithFormat = date.string(withFormat: "MM/yy")
 let monthAndYearString = date.string(with: .monthAndYear)
 ````
 
