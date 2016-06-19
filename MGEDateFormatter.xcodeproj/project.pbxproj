@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3222AA4C1D172DB300029DFE /* NSDate+NSDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3222AA4B1D172DB300029DFE /* NSDate+NSDateFormatter.swift */; };
 		32AD12CA1D12FF79005A1677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12C91D12FF79005A1677 /* AppDelegate.swift */; };
 		32AD12CC1D12FF79005A1677 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12CB1D12FF79005A1677 /* ViewController.swift */; };
 		32AD12CF1D12FF79005A1677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32AD12CD1D12FF79005A1677 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3222AA4B1D172DB300029DFE /* NSDate+NSDateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+NSDateFormatter.swift"; sourceTree = "<group>"; };
 		32AD12C61D12FF79005A1677 /* MGEDateFormatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGEDateFormatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AD12C91D12FF79005A1677 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32AD12CB1D12FF79005A1677 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		32AD12DE1D130047005A1677 /* MGEDateFormatter */ = {
 			isa = PBXGroup;
 			children = (
+				3222AA4B1D172DB300029DFE /* NSDate+NSDateFormatter.swift */,
 				32AD12DF1D130052005A1677 /* DateFormatterProvider.swift */,
 				32AD12E11D1300E7005A1677 /* NSDateFormatter+Configuration.swift */,
 			);
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32AD12F21D132853005A1677 /* NSDate+App.swift in Sources */,
+				3222AA4C1D172DB300029DFE /* NSDate+NSDateFormatter.swift in Sources */,
 				32AD12E21D1300E7005A1677 /* NSDateFormatter+Configuration.swift in Sources */,
 				32AD12CC1D12FF79005A1677 /* ViewController.swift in Sources */,
 				32AD12E01D130052005A1677 /* DateFormatterProvider.swift in Sources */,
