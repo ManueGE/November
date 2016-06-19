@@ -4,9 +4,18 @@
 
 Creating a `NSDateFormatter` is an expensive task. For this reason, **MGEDateFormatter** takes care of caching the created `NSDateFormatter` in order to reuse them along the lifecycle of your app.
 
-## Installing MGEDateFormatter
+The aim of this project is to have a nice API to get strings representations from `NSDate` instaces:
 
-#### Using CocoaPods
+````
+let stringWithStyles = date.string(withDateStyle: .MediumStyle, timeStyle: .NoStyle)
+let stringWithTemplate = date.string(withTemplate: "MMMMyyyy")
+let stringWithFormat = date.string(withFormat: "MM/yy")
+let monthAndYearString = date.string(with: .monthAndYear)
+````
+
+Keep reading to know how!
+
+## Installation
 
 Add the following to your `Podfile`:
 
@@ -37,7 +46,7 @@ let date = NSDate()
 let string = date.string(withDateStyle: .ShortStyle, timeStyle: .ShortStyle)
 ````
 
-if needed, you can provide a custom location to perform the conversion: 
+if needed, you can provide a custom locale to perform the conversion: 
 
 ````
 let spanishLocale = NSLocale(localeIdentifier: "es")
@@ -51,7 +60,7 @@ let date = NSDate()
 let string = date.string(withTemplate: "MMMyyyy")
 ````
 
-if needed, you can provide a custom location to perform the conversion: 
+if needed, you can provide a custom locale to perform the conversion: 
 
 ````
 let spanishLocale = NSLocale(localeIdentifier: "es")
@@ -65,7 +74,7 @@ let date = NSDate()
 let string = date.string(withFormat: "MM/dd/yyyy HH:mm:ss")
 ````
 
-if needed, you can provide a custom location to perform the conversion: 
+if needed, you can provide a custom locale to perform the conversion: 
 
 ````
 let spanishLocale = NSLocale(localeIdentifier: "es")
@@ -86,7 +95,7 @@ let convertedDate = NSDate(string: string, dateStyle: .ShortStyle, timeStyle: .S
 ````
 **Note**: The convertedDate is an `Optional<NSDate>`, and will be `nil` if the string couldn't be parsed
 
-if needed, you can provide a custom location to perform the conversion: 
+if needed, you can provide a custom locale to perform the conversion: 
 
 ````
 let spanishLocale = NSLocale(localeIdentifier: "es")
@@ -101,7 +110,7 @@ let convertedDate = NSDate(string: string, template: "ddMMMMyyyyHHmm")
 ````
 **Note**: The convertedDate is an `Optional<NSDate>`, and will be `nil` if the string couldn't be parsed
 
-if needed, you can provide a custom location to perform the conversion: 
+if needed, you can provide a custom locale to perform the conversion: 
 
 ````
 let spanishLocale = NSLocale(localeIdentifier: "es")
@@ -116,7 +125,7 @@ let convertedDate = NSDate(string: string, format: "dd/MMMM/yyyy HH:mm")
 ````
 **Note**: The convertedDate is an `Optional<NSDate>`, and will be `nil` if the string couldn't be parsed
 
-if needed, you can provide a custom location to perform the conversion: 
+if needed, you can provide a custom locale to perform the conversion: 
 
 ````
 let spanishLocale = NSLocale(localeIdentifier: "es")
