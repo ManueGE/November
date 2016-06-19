@@ -23,6 +23,9 @@ public protocol DateFormatterProvider {
     func configure(formatter: NSDateFormatter)
 }
 
+/*
+ Methods used to cache and retrieve `DateFormatterProvider` instances
+ */
 internal extension NSDateFormatter {
     
     /// Dictionary to store all the cached formatters
@@ -45,6 +48,9 @@ internal extension NSDateFormatter {
     }
 }
 
+/**
+ Methods to convert `NSDate` to/from `String` using `DateFormatterProvider` instances
+ */
 public extension NSDate {
     
     // MARK: String from date
@@ -56,7 +62,7 @@ public extension NSDate {
      */
     func string(with provider: DateFormatterProvider) -> String {
         let formatter = NSDateFormatter.formatter(with: provider)
-        return formatter.stringFromDate(self)
+        return self.string(with: formatter)
     }
     
     // MARK: Date from string
@@ -69,7 +75,6 @@ public extension NSDate {
      */
     convenience init?(string: String, provider: DateFormatterProvider) {
         let formatter = NSDateFormatter.formatter(with: provider)
-        guard let date = formatter.dateFromString(string) else { return nil }
-        self.init(timeIntervalSinceNow: date.timeIntervalSinceNow)
+        self.init(string: string, formatter: formatter)
     }
 }

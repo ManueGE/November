@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "MGEDateFormatter"
-  spec.version      = "1.0.0"
+  spec.version      = "1.1.0"
   spec.summary      = "A handy API to convert NSDate to NSString and back written in swift"
   spec.description  = <<-DESC
   MGEDateFormatter provides a set of extensions to NSDate and NSDateFormatter to build a nice API which simplify the conversion from NSDate to NSString and back.
