@@ -249,6 +249,17 @@ let otherCustomFormatString = date.string(with: otherProvider)
 
 the `NSDateFormatter` will be reused.
 
+#### No cached formatters
+If you don't mind about caching formatters, you simply can use the `NSDate` extension to convert `NSDate` from/to `String` using a `NSDateFormatter`: 
+
+````
+let formatter = NSDateFormatter()
+formatter.dateFormat = "MM/yyyy"
+
+let string = NSDate().string(with: formatter)
+let date = NSDate(string: "06/2016, formatter: formatter")
+````
+
 ---
 
 
