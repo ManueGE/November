@@ -1,5 +1,5 @@
 //
-//  NSDate+App.swift
+//  Date+App.swift
 //  MGEDateFormatter
 //
 //  Created by Manu on 16/6/16.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension NSDate {
+extension Date {
     
     // The templates used in the app
     enum Template: String {
@@ -34,11 +34,11 @@ extension NSDate {
     
     // MARK: Helpers String -> Date
     
-    convenience init?(string: String, template: Template) {
+    init?(string: String, template: Template) {
         self.init(string: string, template: template.rawValue)
     }
     
-    convenience init?(string: String, format: Format) {
+    init?(string: String, format: Format) {
         self.init(string: string, format: format.rawValue)
     }
 }
@@ -52,7 +52,7 @@ class MyDateFormatterProvider: DateFormatterProvider {
         self.cacheKey = "MyConfigurator(\(format))"
     }
     
-    func configure(formatter: NSDateFormatter) {
+    func configure(_ formatter: DateFormatter) {
         formatter.dateFormat = format
         formatter.monthSymbols = ["JN", "FB", "MR", "AP", "MY", "JN", "JL", "AG", "SP", "OT", "NV", "DC"]
         // whatever configuration you need
