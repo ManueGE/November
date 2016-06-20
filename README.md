@@ -15,12 +15,14 @@ let monthAndYearString = date.string(with: .monthAndYear)
 
 Keep reading to know how!
 
+> This is the **Swift 3** version of the library. Check the **Swift 2** version [here](http://github.com/ManueGE/MGEDateFormatter).
+
 ## Installation
 
 Add the following to your `Podfile`:
 
 ````
-pod 'MGEDateFormatter'
+pod 'MGEDateFormatter', :git => 'https://github.com/ManueGE/MGEDateFormatter.git', :branch => 'feature/swift_3'
 ````
 
 Then run `$ pod install`.
