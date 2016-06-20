@@ -1,13 +1,13 @@
 # MGEDateFormatter
 
-**MGEDateFormatter** provides a set of extensions to NSDate and NSDateFormatter to build a nice API which simplify the conversion from NSDate to NSString and back. 
+**MGEDateFormatter** provides a set of extensions to Date and DateFormatter to build a nice API which simplify the conversion from Date to NSString and back. 
 
-Creating a `NSDateFormatter` is an expensive task. For this reason, **MGEDateFormatter** takes care of caching the created `NSDateFormatter` in order to reuse them along the lifecycle of your app.
+Creating a `DateFormatter` is an expensive task. For this reason, **MGEDateFormatter** takes care of caching the created `DateFormatter` in order to reuse them along the lifecycle of your app.
 
-The aim of this project is to have a nice API to get strings representations from `NSDate` instaces:
+The aim of this project is to have a nice API to get strings representations from `Date` instaces:
 
 ````
-let stringWithStyles = date.string(withDateStyle: .MediumStyle, timeStyle: .NoStyle)
+let stringWithStyles = date.string(dateStyle: .mediumStyle, timeStyle: .noStyle)
 let stringWithTemplate = date.string(withTemplate: "MMMMyyyy")
 let stringWithFormat = date.string(withFormat: "MM/yy")
 let monthAndYearString = date.string(with: .monthAndYear)
@@ -35,102 +35,102 @@ If you don’t have CocoaPods installed or integrated into your project, you can
 
 ## Usage
 
-### NSDate to String
+### Date to String
 
-There are three main ways to convert a `NSDate` to a `String`. 
+There are three main ways to convert a `Date` to a `String`. 
 
-##### Using NSDateFormatterStyle
+##### Using DateFormatter.Style
 
 ````
-let date = NSDate()
-let string = date.string(withDateStyle: .ShortStyle, timeStyle: .ShortStyle)
+let date = Date()
+let string = date.string(dateStyle: .shortStyle, timeStyle: .shortStyle)
 ````
 
 if needed, you can provide a custom locale to perform the conversion: 
 
 ````
-let spanishLocale = NSLocale(localeIdentifier: "es")
-let date = NSDate()
-let string = date.string(withDateStyle: .MediumStyle, timeStyle: .NoStyle, locale: spanishLocale)
+let spanishLocale = Locale(localeIdentifier: "es")
+let date = Date()
+let string = date.string(dateStyle: .mediumStyle, timeStyle: .noStyle, locale: spanishLocale)
 ````
 
 ##### Using format from template
 ````
-let date = NSDate()
+let date = Date()
 let string = date.string(withTemplate: "MMMyyyy")
 ````
 
 if needed, you can provide a custom locale to perform the conversion: 
 
 ````
-let spanishLocale = NSLocale(localeIdentifier: "es")
-let date = NSDate()
+let spanishLocale = Locale(localeIdentifier: "es")
+let date = Date()
 let string = date.string(withTemplate: "MMMyyyy", locale: spanishLocale)
 ````
 
 ##### Using date format
 ````
-let date = NSDate()
+let date = Date()
 let string = date.string(withFormat: "MM/dd/yyyy HH:mm:ss")
 ````
 
 if needed, you can provide a custom locale to perform the conversion: 
 
 ````
-let spanishLocale = NSLocale(localeIdentifier: "es")
-let date = NSDate()
+let spanishLocale = Locale(localeIdentifier: "es")
+let date = Date()
 let string = date.string(withFormat: "MM/dd/yyyy HH:mm:ss", locale: spanishLocale)
 ````
 
 
-### String to NSDate
+### String to Date
 
-In the same way, there are three ways to create a `NSDate` from a `String`. The thee of them are provided as `NSDate` initializers:
+In the same way, there are three ways to create a `Date` from a `String`. The thee of them are provided as `Date` initializers:
 
-##### Using NSDateFormatterStyle
+##### Using DateFormatter.Style
 
 ````
 let string = "11/18/83, 11:30 AM"
-let convertedDate = NSDate(string: string, dateStyle: .ShortStyle, timeStyle: .ShortStyle)
+let convertedDate = Date(string: string, dateStyle: .shortStyle, timeStyle: .shortStyle)
 ````
-**Note**: The convertedDate is an `Optional<NSDate>`, and will be `nil` if the string couldn't be parsed
+**Note**: The convertedDate is an `Optional<Date>`, and will be `nil` if the string couldn't be parsed
 
 if needed, you can provide a custom locale to perform the conversion: 
 
 ````
-let spanishLocale = NSLocale(localeIdentifier: "es")
+let spanishLocale = Locale(localeIdentifier: "es")
 let string = "18/11/83 11:30"
-let convertedDate = NSDate(string: string, dateStyle: .ShortStyle, timeStyle: .ShortStyle, locale: spanishLocale)
+let convertedDate = Date(string: string, dateStyle: .shortStyle, timeStyle: .shortStyle, locale: spanishLocale)
 ````
 
 ##### Using format from template
 ````
 let string = "November 18, 1983, 11:30"
-let convertedDate = NSDate(string: string, template: "ddMMMMyyyyHHmm")
+let convertedDate = Date(string: string, template: "ddMMMMyyyyHHmm")
 ````
-**Note**: The convertedDate is an `Optional<NSDate>`, and will be `nil` if the string couldn't be parsed
+**Note**: The convertedDate is an `Optional<Date>`, and will be `nil` if the string couldn't be parsed
 
 if needed, you can provide a custom locale to perform the conversion: 
 
 ````
-let spanishLocale = NSLocale(localeIdentifier: "es")
+let spanishLocale = Locale(localeIdentifier: "es")
 let string = "noviembre 18, 1983, 11:30"
-let convertedDate = NSDate(string: string, template: "ddMMMMyyyyHHmm", locale: spanishLocale)
+let convertedDate = Date(string: string, template: "ddMMMMyyyyHHmm", locale: spanishLocale)
 ````
 
 ##### Using date format
 ````
 let string = "18/November/1983 11:30"
-let convertedDate = NSDate(string: string, format: "dd/MMMM/yyyy HH:mm")
+let convertedDate = Date(string: string, format: "dd/MMMM/yyyy HH:mm")
 ````
-**Note**: The convertedDate is an `Optional<NSDate>`, and will be `nil` if the string couldn't be parsed
+**Note**: The convertedDate is an `Optional<Date>`, and will be `nil` if the string couldn't be parsed
 
 if needed, you can provide a custom locale to perform the conversion: 
 
 ````
-let spanishLocale = NSLocale(localeIdentifier: "es")
+let spanishLocale = Locale(localeIdentifier: "es")
 let string = "18/noviembre/1983 11:30"
-let convertedDate = NSDate(string: string, format: "dd/MMMM/yyyy HH:mm", locale: spanishLocale)
+let convertedDate = Date(string: string, format: "dd/MMMM/yyyy HH:mm", locale: spanishLocale)
 ````
 
 ### Best practices
@@ -153,12 +153,12 @@ enum DateFormat: String {
 }
 ````
 
-#### 2- Create a `NSDate` extension:
+#### 2- Create a `Date` extension:
 
 I create an extension that wraps the `MGEDateFormatter` methods to accept values of the defined `enum`:
 
 ````
-extension NSDate {
+extension Date {
     
     // MARK: Helpers Date -> String
     
@@ -188,19 +188,19 @@ extension NSDate {
 Now, we have a nice, swifty, simple API to convert dates to strings and back: 
 
 ````
-let date = NSDate()
+let date = Date()
 
 // Templates
 let monthAndYearString = date.string(with: .monthAndYear)
 let fullShortDateString = date.string(with: .fullShortDate)
 
-let dateFromMonthAndYear = NSDate(string: "11/1983", template: .monthAndYear)
+let dateFromMonthAndYear = Date(string: "11/1983", template: .monthAndYear)
 
 // Formats
 let fullDateString = date.string(with: .fullDate)
 let fullDateAndTimeString = date.string(with: .fullDateAndTime)
 
-let dateFromfullDateString = NSDate(string: "11/18/1983", format: .fullDate)
+let dateFromfullDateString = Date(string: "11/18/1983", format: .fullDate)
 ````
 
 
@@ -210,7 +210,7 @@ Aren't the three methods provided to format strings enough for you? Don't worry,
 
 If you want to add further customization to your formatter, you can use the `DateFormatterProvider` protocol. 
 
-To conform this protocol you have to override a property (`cacheKey`) and a function (`configure(_: NSDateFormatter)`). Here you have an example: 
+To conform this protocol you have to override a property (`cacheKey`) and a function (`configure(_: DateFormatter)`). Here you have an example: 
 
 
 ````
@@ -223,7 +223,7 @@ class MyDateFormatterProvider: DateFormatterProvider {
         self.cacheKey = "MyConfigurator(\(format))"
     }
     
-    func configure(formatter: NSDateFormatter) {
+    func configure(formatter: DateFormatter) {
         formatter.dateFormat = format
         formatter.monthSymbols = ["JN", "FB", "MR", "AP", "MY", "JN", "JL", "AG", "SP", "OT", "NV", "DC"]
         // whatever configuration you need
@@ -238,35 +238,35 @@ and then, later:
 let myProvider = MyDateFormatterProvider(format: "dd MMMM yyyy")
 
 // from date to string
-let date = NSDate()
+let date = Date()
 let myCustomFormatString = date.string(with: myProvider)
 
 // from string to date
 let string = "18 NV 1983"
-let convertedDate = NSDate(string: string, provider: myProvider)
+let convertedDate = Date(string: string, provider: myProvider)
 
 ````
-The `NSDateFormatter` used to serialize the `NSDate` or the `String` will be cached under the defined `cacheKey` and will be nicely reused if it is needed again. In other words, if in any other point of the app we create a new provider with the same format as this
+The `DateFormatter` used to serialize the `Date` or the `String` will be cached under the defined `cacheKey` and will be nicely reused if it is needed again. In other words, if in any other point of the app we create a new provider with the same format as this
 
 ````
 let otherProvider = MyDateFormatterProvider(format: "dd MMMM yyyy")
 
 // from date to string
-let otherDate = NSDate()
+let otherDate = Date()
 let otherCustomFormatString = date.string(with: otherProvider)
 ````
 
-the `NSDateFormatter` will be reused.
+the `DateFormatter` will be reused.
 
 #### No cached formatters
-If you don't mind about caching formatters, you simply can use the `NSDate` extension to convert `NSDate` from/to `String` using a `NSDateFormatter`: 
+If you don't mind about caching formatters, you simply can use the `Date` extension to convert `Date` from/to `String` using a `DateFormatter`: 
 
 ````
-let formatter = NSDateFormatter()
+let formatter = DateFormatter()
 formatter.dateFormat = "MM/yyyy"
 
-let string = NSDate().string(with: formatter)
-let date = NSDate(string: "06/2016, formatter: formatter")
+let string = Date().string(with: formatter)
+let date = Date(string: "06/2016, formatter: formatter")
 ````
 
 ---
