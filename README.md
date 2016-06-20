@@ -15,6 +15,8 @@ let monthAndYearString = date.string(with: .monthAndYear)
 
 Keep reading to know how!
 
+> Check the preliminary **Swift 3** version [here](https://github.com/ManueGE/MGEDateFormatter/tree/feature/swift_3).
+
 ## Installation
 
 Add the following to your `Podfile`:
