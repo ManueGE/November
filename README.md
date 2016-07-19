@@ -7,7 +7,7 @@ Creating a `DateFormatter` is an expensive task. For this reason, **MGEDateForma
 The aim of this project is to have a nice API to get strings representations from `Date` instaces:
 
 ````
-let stringWithStyles = date.string(dateStyle: .mediumStyle, timeStyle: .noStyle)
+let stringWithStyles = date.string(dateStyle: .medium, timeStyle: .none)
 let stringWithTemplate = date.string(withTemplate: "MMMMyyyy")
 let stringWithFormat = date.string(withFormat: "MM/yy")
 let monthAndYearString = date.string(with: .monthAndYear)
