@@ -14,11 +14,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dateLabel.text = Date().string(dateStyle: .longStyle, timeStyle: .shortStyle)
+        dateLabel.text = Date().string(dateStyle: .long, timeStyle: .short)
     }
     
     @IBAction func didPressStyle(sender: AnyObject) {
-        dateLabel.text = Date().string(dateStyle: .longStyle, timeStyle: .shortStyle)
+        dateLabel.text = Date().string(dateStyle: .long, timeStyle: .short)
     }
     
     @IBAction func didPressTemplateFullShort(sender: AnyObject) {
