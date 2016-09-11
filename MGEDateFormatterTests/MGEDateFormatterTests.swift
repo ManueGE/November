@@ -32,7 +32,7 @@ class MGEDateFormatterTests: XCTestCase {
     let template = "ddMMMMyyyyHHmm"
     let format = "dd/MMMM/yyyy HH:mm"
     
-    let spanishLocale = Locale(localeIdentifier: "es")
+    let spanishLocale = Locale(identifier: "es")
     let date: Date = {
        
         var components = DateComponents()
@@ -41,7 +41,7 @@ class MGEDateFormatterTests: XCTestCase {
         components.year = 1983
         components.hour = 11
         components.minute = 30
-        return Calendar(calendarIdentifier: .gregorian)!.date(from: components)!
+        return Calendar(identifier: .gregorian).date(from: components)!
         
     }()
     
@@ -74,24 +74,24 @@ class MGEDateFormatterTests: XCTestCase {
     
     // MARK: Style
     func testDateToStringWithStyle() {
-        let string = date.string(dateStyle: .shortStyle, timeStyle: .shortStyle)
+        let string = date.string(dateStyle: .short, timeStyle: .short)
         XCTAssertEqual(string, "11/18/83, 11:30 AM", "conversion failed")
     }
     
     func testStringToDateWithStyle() {
         let string = "11/18/83, 11:30 AM"
-        let convertedDate = Date(string: string, dateStyle: .shortStyle, timeStyle: .shortStyle)!
+        let convertedDate = Date(string: string, dateStyle: .short, timeStyle: .short)!
         XCTAssertEqualWithAccuracy(convertedDate.timeIntervalSince1970, date.timeIntervalSince1970, accuracy: 0.001, "conversion failed")
     }
     
     func testDateToStringWithLocalizedStyle() {
-        let string = date.string(dateStyle: .shortStyle, timeStyle: .shortStyle, locale: spanishLocale)
+        let string = date.string(dateStyle: .short, timeStyle: .short, locale: spanishLocale)
         XCTAssertEqual(string, "18/11/83 11:30", "conversion failed")
     }
     
     func testStringToDateWithLocalizedStyle() {
         let string = "18/11/83 11:30"
-        let convertedDate = Date(string: string, dateStyle: .shortStyle, timeStyle: .shortStyle, locale: spanishLocale)!
+        let convertedDate = Date(string: string, dateStyle: .short, timeStyle: .short, locale: spanishLocale)!
         XCTAssertEqualWithAccuracy(convertedDate.timeIntervalSince1970, date.timeIntervalSince1970, accuracy: 0.001, "conversion failed")
     }
     
