@@ -13,7 +13,7 @@ extension DateFormatter {
     /**
      Enum that implement the `DateFormatterProvider` protocol. Each case is used to adjust some properties of the `DateFormatter`
      */
-    private enum Configuration: DateFormatterProvider {
+    fileprivate enum Configuration: DateFormatterProvider {
         
         case style(dateStyle: Style, timeStyle: Style)
         case template(String)
@@ -34,11 +34,11 @@ extension DateFormatter {
                 return "format(\(format))"
                 
             case let .localizedStyle(dateStyle, timeStyle, locale):
-                return "localizedStyle(\(dateStyle.rawValue),\(timeStyle.rawValue),\(locale.localeIdentifier))"
+                return "localizedStyle(\(dateStyle.rawValue),\(timeStyle.rawValue),\(locale.identifier))"
             case let .localizedTemplate(template, locale):
-                return "localizedTemplate(\(template),\(locale.localeIdentifier))"
+                return "localizedTemplate(\(template),\(locale.identifier))"
             case let .localizedFormat(format, locale):
-                return "localizedFormat(\(format),\(locale.localeIdentifier))"
+                return "localizedFormat(\(format),\(locale.identifier))"
                 
             }
         }
