@@ -15,7 +15,7 @@ let monthAndYearString = date.string(with: .monthAndYear)
 
 Keep reading to know how!
 
-> This is the **Swift 3** version of the library. Check the **Swift 2** version [here](https://github.com/ManueGE/MGEDateFormatter/tree/1.1.0).
+> This is the **Swift 3** version of the library. Check the **Swift 2** version [here](https://github.com/ManueGE/MGEDateFormatter/tree/swift_2).
 
 ## Installation
 
