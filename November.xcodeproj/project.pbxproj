@@ -88,7 +88,7 @@
 				32AD12C91D12FF79005A1677 /* AppDelegate.swift */,
 				32AD12CB1D12FF79005A1677 /* ViewController.swift */,
 				32AD12F11D132853005A1677 /* NSDate+App.swift */,
-				32AD12DE1D130047005A1677 /* MGEDateFormatter */,
+				32AD12DE1D130047005A1677 /* November */,
 				32AD12CD1D12FF79005A1677 /* Main.storyboard */,
 				32AD12D01D12FF79005A1677 /* Assets.xcassets */,
 				32AD12D21D12FF79005A1677 /* LaunchScreen.storyboard */,
@@ -97,14 +97,14 @@
 			path = November;
 			sourceTree = "<group>";
 		};
-		32AD12DE1D130047005A1677 /* MGEDateFormatter */ = {
+		32AD12DE1D130047005A1677 /* November */ = {
 			isa = PBXGroup;
 			children = (
 				3222AA4B1D172DB300029DFE /* Date+DateFormatter.swift */,
 				32AD12DF1D130052005A1677 /* DateFormatterProvider.swift */,
 				32AD12E11D1300E7005A1677 /* DateFormatter+Configuration.swift */,
 			);
-			path = MGEDateFormatter;
+			path = November;
 			sourceTree = "<group>";
 		};
 		32AD12E81D130254005A1677 /* NovemberTests */ = {
