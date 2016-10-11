@@ -21,8 +21,8 @@ Keep reading to know how!
 
 Add the following to your `Podfile`:
 
-````swift
-pod 'MGEDateFormatter', :git => 'https://github.com/ManueGE/MGEDateFormatter.git', :branch => 'feature/swift_3'
+````ruby
+pod 'MGEDateFormatter'
 ````
 
 Then run `$ pod install`.
