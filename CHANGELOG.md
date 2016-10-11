@@ -1,5 +1,8 @@
 # Change Log
 
+### 2.0.1
+- Just change the podspec to support the new project name. 
+
 ### 2.0.0
 - **Swift 3** support. 
 
