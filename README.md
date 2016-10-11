@@ -1,5 +1,7 @@
 # MGEDateFormatter
 
+> **MGEDateFormatter** has been deprecated. Use [**November**](http://github.com/ManueGE/November) instead.
+
 **MGEDateFormatter** provides a set of extensions to Date and DateFormatter to build a nice API which simplify the conversion from Date to NSString and back. 
 
 Creating a `DateFormatter` is an expensive task. For this reason, **MGEDateFormatter** takes care of caching the created `DateFormatter` in order to reuse them along the lifecycle of your app.
