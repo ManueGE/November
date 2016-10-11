@@ -1,3 +1,7 @@
+![November banner](https://raw.githubusercontent.com/ManueGE/November/master/images/banner.png)
+
+---
+
 # November
 
 **November** provides a set of extensions to Date and DateFormatter to build a nice API which simplify the conversion from Date to NSString and back. 
