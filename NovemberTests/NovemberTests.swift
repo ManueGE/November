@@ -1,13 +1,13 @@
 //
-//  MGEDateFormatterTests.swift
-//  MGEDateFormatterTests
+//  NovemberTests.swift
+//  NovemberTests
 //
 //  Created by Manu on 16/6/16.
 //  Copyright © 2016 manuege. All rights reserved.
 //
 
 import XCTest
-@testable import MGEDateFormatter
+@testable import November
 
 class MyConfigurator: DateFormatterProvider {
     let cacheKey: String
@@ -26,7 +26,7 @@ class MyConfigurator: DateFormatterProvider {
     }
 }
 
-class MGEDateFormatterTests: XCTestCase {
+class NovemberTests: XCTestCase {
     
     let configurator = MyConfigurator(format: "dd MMMM yyyy hh:mm:ss")
     let template = "ddMMMMyyyyHHmm"
