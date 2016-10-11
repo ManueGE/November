@@ -1,6 +1,6 @@
 # Change Log
 
-### 1.0.0 (11 October 2016)
+### 3.0.0 (11 October 2016)
 - First version of the library, now called **November**
 
 ## MEGDateFormatter (Deprecated)
