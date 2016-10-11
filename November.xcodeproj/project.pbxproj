@@ -15,7 +15,7 @@
 		32AD12D41D12FF79005A1677 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32AD12D21D12FF79005A1677 /* LaunchScreen.storyboard */; };
 		32AD12E01D130052005A1677 /* DateFormatterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12DF1D130052005A1677 /* DateFormatterProvider.swift */; };
 		32AD12E21D1300E7005A1677 /* DateFormatter+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12E11D1300E7005A1677 /* DateFormatter+Configuration.swift */; };
-		32AD12EA1D130254005A1677 /* MGEDateFormatterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12E91D130254005A1677 /* MGEDateFormatterTests.swift */; };
+		32AD12EA1D130254005A1677 /* NovemberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12E91D130254005A1677 /* NovemberTests.swift */; };
 		32AD12F21D132853005A1677 /* NSDate+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12F11D132853005A1677 /* NSDate+App.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +41,7 @@
 		32AD12DF1D130052005A1677 /* DateFormatterProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterProvider.swift; sourceTree = "<group>"; };
 		32AD12E11D1300E7005A1677 /* DateFormatter+Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Configuration.swift"; sourceTree = "<group>"; };
 		32AD12E71D130254005A1677 /* NovemberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NovemberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		32AD12E91D130254005A1677 /* MGEDateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGEDateFormatterTests.swift; sourceTree = "<group>"; };
+		32AD12E91D130254005A1677 /* NovemberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovemberTests.swift; sourceTree = "<group>"; };
 		32AD12EB1D130254005A1677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32AD12F11D132853005A1677 /* NSDate+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+App.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,7 +110,7 @@
 		32AD12E81D130254005A1677 /* NovemberTests */ = {
 			isa = PBXGroup;
 			children = (
-				32AD12E91D130254005A1677 /* MGEDateFormatterTests.swift */,
+				32AD12E91D130254005A1677 /* NovemberTests.swift */,
 				32AD12EB1D130254005A1677 /* Info.plist */,
 			);
 			path = NovemberTests;
@@ -233,7 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32AD12EA1D130254005A1677 /* MGEDateFormatterTests.swift in Sources */,
+				32AD12EA1D130254005A1677 /* NovemberTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
