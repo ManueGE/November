@@ -24,6 +24,4 @@ Pod::Spec.new do |spec|
 
   spec.source_files = "November/November/*.{swift}"
 
-  spec.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
-
 end
