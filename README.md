@@ -21,8 +21,8 @@ Keep reading to know how!
 
 Add the following to your `Podfile`:
 
-````swift
-pod 'November', :git => 'https://github.com/ManueGE/November.git', :branch => 'feature/swift_3'
+````ruby
+pod 'November'
 ````
 
 Then run `$ pod install`.
