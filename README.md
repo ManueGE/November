@@ -10,7 +10,7 @@ Creating a `DateFormatter` is an expensive task. For this reason, **November** t
 
 The aim of this project is to have a nice API to get strings representations from `Date` instaces:
 
-````
+````swift
 let stringWithStyles = date.string(dateStyle: .medium, timeStyle: .none)
 let stringWithTemplate = date.string(withTemplate: "MMMMyyyy")
 let stringWithFormat = date.string(withFormat: "MM/yy")
