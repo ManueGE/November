@@ -15,13 +15,13 @@ let monthAndYearString = date.string(with: .monthAndYear)
 
 Keep reading to know how!
 
-> This is the **Swift 3** version of the library. Check the **Swift 2** version [here](http://github.com/ManueGE/MGEDateFormatter).
+> This is the **Swift 3** version of the library. Check the **Swift 2** version [here](https://github.com/ManueGE/MGEDateFormatter/tree/swift_2).
 
 ## Installation
 
 Add the following to your `Podfile`:
 
-````
+````swift
 pod 'MGEDateFormatter', :git => 'https://github.com/ManueGE/MGEDateFormatter.git', :branch => 'feature/swift_3'
 ````
 
@@ -29,7 +29,7 @@ Then run `$ pod install`.
 
 And finally, in the classes where you need **MGEDateFormatter**: 
 
-````
+````swift
 import MGEDateFormatter
 ````
 
@@ -43,42 +43,42 @@ There are three main ways to convert a `Date` to a `String`.
 
 ##### Using DateFormatter.Style
 
-````
+````swift
 let date = Date()
 let string = date.string(dateStyle: .shortStyle, timeStyle: .shortStyle)
 ````
 
 if needed, you can provide a custom locale to perform the conversion: 
 
-````
+````swift
 let spanishLocale = Locale(localeIdentifier: "es")
 let date = Date()
 let string = date.string(dateStyle: .mediumStyle, timeStyle: .noStyle, locale: spanishLocale)
 ````
 
 ##### Using format from template
-````
+````swift
 let date = Date()
 let string = date.string(withTemplate: "MMMyyyy")
 ````
 
 if needed, you can provide a custom locale to perform the conversion: 
 
-````
+````swift
 let spanishLocale = Locale(localeIdentifier: "es")
 let date = Date()
 let string = date.string(withTemplate: "MMMyyyy", locale: spanishLocale)
 ````
 
 ##### Using date format
-````
+````swift
 let date = Date()
 let string = date.string(withFormat: "MM/dd/yyyy HH:mm:ss")
 ````
 
 if needed, you can provide a custom locale to perform the conversion: 
 
-````
+````swift
 let spanishLocale = Locale(localeIdentifier: "es")
 let date = Date()
 let string = date.string(withFormat: "MM/dd/yyyy HH:mm:ss", locale: spanishLocale)
@@ -91,7 +91,7 @@ In the same way, there are three ways to create a `Date` from a `String`. The th
 
 ##### Using DateFormatter.Style
 
-````
+````swift
 let string = "11/18/83, 11:30 AM"
 let convertedDate = Date(string: string, dateStyle: .shortStyle, timeStyle: .shortStyle)
 ````
@@ -99,14 +99,14 @@ let convertedDate = Date(string: string, dateStyle: .shortStyle, timeStyle: .sho
 
 if needed, you can provide a custom locale to perform the conversion: 
 
-````
+````swift
 let spanishLocale = Locale(localeIdentifier: "es")
 let string = "18/11/83 11:30"
 let convertedDate = Date(string: string, dateStyle: .shortStyle, timeStyle: .shortStyle, locale: spanishLocale)
 ````
 
 ##### Using format from template
-````
+````swift
 let string = "November 18, 1983, 11:30"
 let convertedDate = Date(string: string, template: "ddMMMMyyyyHHmm")
 ````
@@ -114,14 +114,14 @@ let convertedDate = Date(string: string, template: "ddMMMMyyyyHHmm")
 
 if needed, you can provide a custom locale to perform the conversion: 
 
-````
+````swift
 let spanishLocale = Locale(localeIdentifier: "es")
 let string = "noviembre 18, 1983, 11:30"
 let convertedDate = Date(string: string, template: "ddMMMMyyyyHHmm", locale: spanishLocale)
 ````
 
 ##### Using date format
-````
+````swift
 let string = "18/November/1983 11:30"
 let convertedDate = Date(string: string, format: "dd/MMMM/yyyy HH:mm")
 ````
@@ -129,7 +129,7 @@ let convertedDate = Date(string: string, format: "dd/MMMM/yyyy HH:mm")
 
 if needed, you can provide a custom locale to perform the conversion: 
 
-````
+````swift
 let spanishLocale = Locale(localeIdentifier: "es")
 let string = "18/noviembre/1983 11:30"
 let convertedDate = Date(string: string, format: "dd/MMMM/yyyy HH:mm", locale: spanishLocale)
@@ -143,7 +143,7 @@ In my own apps, I like to use **MGEDateFormatter** in this way:
 
 Usually I have just a set of few templates and/or formats to use. I wrap them into a couple of `enum`:
 
-````
+````swift
 enum DateTemplate: String {
     case monthAndYear = "MMMyyyy"
     case fullShortDate = "ddMMyy"
@@ -159,7 +159,7 @@ enum DateFormat: String {
 
 I create an extension that wraps the `MGEDateFormatter` methods to accept values of the defined `enum`:
 
-````
+````swift
 extension Date {
     
     // MARK: Helpers Date -> String
@@ -189,7 +189,7 @@ extension Date {
 
 Now, we have a nice, swifty, simple API to convert dates to strings and back: 
 
-````
+````swift
 let date = Date()
 
 // Templates
@@ -215,7 +215,7 @@ If you want to add further customization to your formatter, you can use the `Dat
 To conform this protocol you have to override a property (`cacheKey`) and a function (`configure(_: DateFormatter)`). Here you have an example: 
 
 
-````
+````swift
 class MyDateFormatterProvider: DateFormatterProvider {
     let cacheKey: String
     let format: String
@@ -236,7 +236,7 @@ class MyDateFormatterProvider: DateFormatterProvider {
 
 and then, later:
 
-````
+````swift
 let myProvider = MyDateFormatterProvider(format: "dd MMMM yyyy")
 
 // from date to string
@@ -248,9 +248,11 @@ let string = "18 NV 1983"
 let convertedDate = Date(string: string, provider: myProvider)
 
 ````
+
 The `DateFormatter` used to serialize the `Date` or the `String` will be cached under the defined `cacheKey` and will be nicely reused if it is needed again. In other words, if in any other point of the app we create a new provider with the same format as this
 
-````
+
+````swift
 let otherProvider = MyDateFormatterProvider(format: "dd MMMM yyyy")
 
 // from date to string
@@ -263,7 +265,7 @@ the `DateFormatter` will be reused.
 #### No cached formatters
 If you don't mind about caching formatters, you simply can use the `Date` extension to convert `Date` from/to `String` using a `DateFormatter`: 
 
-````
+````swift
 let formatter = DateFormatter()
 formatter.dateFormat = "MM/yyyy"
 
