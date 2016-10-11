@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "November"
-  spec.version      = "1.0.0"
+  spec.version      = "3.0.0"
   spec.summary      = "A handy API to convert `Date` to `String` and back written in swift"
   spec.description  = <<-DESC
   November provides a set of extensions to `Date` and `DateFormatter` to build a nice API which simplify the conversion from `Date` to `Strin and back.
