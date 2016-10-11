@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import MGEDateFormatter
+@testable import November
 
 class MyConfigurator: DateFormatterProvider {
     let cacheKey: String
@@ -26,7 +26,7 @@ class MyConfigurator: DateFormatterProvider {
     }
 }
 
-class MGEDateFormatterTests: XCTestCase {
+class NovemberTests: XCTestCase {
     
     let configurator = MyConfigurator(format: "dd MMMM yyyy hh:mm:ss")
     let template = "ddMMMMyyyyHHmm"
