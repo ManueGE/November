@@ -1,8 +1,8 @@
-# MGEDateFormatter
+# November
 
-**MGEDateFormatter** provides a set of extensions to Date and DateFormatter to build a nice API which simplify the conversion from Date to NSString and back. 
+**November** provides a set of extensions to Date and DateFormatter to build a nice API which simplify the conversion from Date to NSString and back. 
 
-Creating a `DateFormatter` is an expensive task. For this reason, **MGEDateFormatter** takes care of caching the created `DateFormatter` in order to reuse them along the lifecycle of your app.
+Creating a `DateFormatter` is an expensive task. For this reason, **November** takes care of caching the created `DateFormatter` in order to reuse them along the lifecycle of your app.
 
 The aim of this project is to have a nice API to get strings representations from `Date` instaces:
 
@@ -15,22 +15,22 @@ let monthAndYearString = date.string(with: .monthAndYear)
 
 Keep reading to know how!
 
-> This is the **Swift 3** version of the library. Check the **Swift 2** version [here](https://github.com/ManueGE/MGEDateFormatter/tree/swift_2).
+> This is the **Swift 3** version of the library. Check the **Swift 2** version [here](https://github.com/ManueGE/November/tree/swift_2).
 
 ## Installation
 
 Add the following to your `Podfile`:
 
 ````swift
-pod 'MGEDateFormatter', :git => 'https://github.com/ManueGE/MGEDateFormatter.git', :branch => 'feature/swift_3'
+pod 'November', :git => 'https://github.com/ManueGE/November.git', :branch => 'feature/swift_3'
 ````
 
 Then run `$ pod install`.
 
-And finally, in the classes where you need **MGEDateFormatter**: 
+And finally, in the classes where you need **November**: 
 
 ````swift
-import MGEDateFormatter
+import November
 ````
 
 If you don’t have CocoaPods installed or integrated into your project, you can learn how to do so [here](http://cocoapods.org).
@@ -137,7 +137,7 @@ let convertedDate = Date(string: string, format: "dd/MMMM/yyyy HH:mm", locale: s
 
 ### Best practices
 
-In my own apps, I like to use **MGEDateFormatter** in this way: 
+In my own apps, I like to use **November** in this way: 
 
 ##### 1- Create a `enum` with my date formatter templates and/or formats: 
 
@@ -157,7 +157,7 @@ enum DateFormat: String {
 
 #### 2- Create a `Date` extension:
 
-I create an extension that wraps the `MGEDateFormatter` methods to accept values of the defined `enum`:
+I create an extension that wraps the `November` methods to accept values of the defined `enum`:
 
 ````swift
 extension Date {
@@ -208,7 +208,7 @@ let dateFromfullDateString = Date(string: "11/18/1983", format: .fullDate)
 
 ### Custom formatters
 
-Aren't the three methods provided to format strings enough for you? Don't worry, you can still take advantage of **MGEDateFormatter**. 
+Aren't the three methods provided to format strings enough for you? Don't worry, you can still take advantage of **November**. 
 
 If you want to add further customization to your formatter, you can use the `DateFormatterProvider` protocol. 
 
@@ -283,4 +283,4 @@ let date = Date(string: "06/2016, formatter: formatter")
 
 ## License
 
-MGEDateFormatter is available under the [MIT license](LICENSE.md).
+November is available under the [MIT license](LICENSE.md).

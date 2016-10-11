@@ -1,6 +1,10 @@
 # Change Log
 
-### 2.0.1
+### 1.0.0 (11 October 2016)
+- First version of the library, now called **November**
+
+## MEGDateFormatter (Deprecated)
+### 2.0.1 (11 October 2016)
 - Just change the podspec to support the new project name. 
 
 ### 2.0.0

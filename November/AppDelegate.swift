@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  MGEDateFormatter
+//  November
 //
 //  Created by Manu on 16/6/16.
 //  Copyright © 2016 manuege. All rights reserved.
