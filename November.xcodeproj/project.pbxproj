@@ -31,7 +31,7 @@
 
 /* Begin PBXFileReference section */
 		3222AA4B1D172DB300029DFE /* Date+DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+DateFormatter.swift"; sourceTree = "<group>"; };
-		32AD12C61D12FF79005A1677 /* MGEDateFormatter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MGEDateFormatter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		32AD12C61D12FF79005A1677 /* November.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = November.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AD12C91D12FF79005A1677 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32AD12CB1D12FF79005A1677 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		32AD12CE1D12FF79005A1677 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		32AD12D51D12FF79005A1677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32AD12DF1D130052005A1677 /* DateFormatterProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterProvider.swift; sourceTree = "<group>"; };
 		32AD12E11D1300E7005A1677 /* DateFormatter+Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Configuration.swift"; sourceTree = "<group>"; };
-		32AD12E71D130254005A1677 /* MGEDateFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MGEDateFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		32AD12E71D130254005A1677 /* NovemberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NovemberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AD12E91D130254005A1677 /* MGEDateFormatterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGEDateFormatterTests.swift; sourceTree = "<group>"; };
 		32AD12EB1D130254005A1677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32AD12F11D132853005A1677 /* NSDate+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+App.swift"; sourceTree = "<group>"; };
@@ -76,8 +76,8 @@
 		32AD12C71D12FF79005A1677 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				32AD12C61D12FF79005A1677 /* MGEDateFormatter.app */,
-				32AD12E71D130254005A1677 /* MGEDateFormatterTests.xctest */,
+				32AD12C61D12FF79005A1677 /* November.app */,
+				32AD12E71D130254005A1677 /* NovemberTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,9 +119,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		32AD12C51D12FF78005A1677 /* MGEDateFormatter */ = {
+		32AD12C51D12FF78005A1677 /* November */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 32AD12D81D12FF79005A1677 /* Build configuration list for PBXNativeTarget "MGEDateFormatter" */;
+			buildConfigurationList = 32AD12D81D12FF79005A1677 /* Build configuration list for PBXNativeTarget "November" */;
 			buildPhases = (
 				32AD12C21D12FF78005A1677 /* Sources */,
 				32AD12C31D12FF78005A1677 /* Frameworks */,
@@ -131,14 +131,14 @@
 			);
 			dependencies = (
 			);
-			name = MGEDateFormatter;
+			name = November;
 			productName = MGEDateFormatter;
-			productReference = 32AD12C61D12FF79005A1677 /* MGEDateFormatter.app */;
+			productReference = 32AD12C61D12FF79005A1677 /* November.app */;
 			productType = "com.apple.product-type.application";
 		};
-		32AD12E61D130254005A1677 /* MGEDateFormatterTests */ = {
+		32AD12E61D130254005A1677 /* NovemberTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 32AD12F01D130254005A1677 /* Build configuration list for PBXNativeTarget "MGEDateFormatterTests" */;
+			buildConfigurationList = 32AD12F01D130254005A1677 /* Build configuration list for PBXNativeTarget "NovemberTests" */;
 			buildPhases = (
 				32AD12E31D130254005A1677 /* Sources */,
 				32AD12E41D130254005A1677 /* Frameworks */,
@@ -149,9 +149,9 @@
 			dependencies = (
 				32AD12ED1D130254005A1677 /* PBXTargetDependency */,
 			);
-			name = MGEDateFormatterTests;
+			name = NovemberTests;
 			productName = MGEDateFormatterTests;
-			productReference = 32AD12E71D130254005A1677 /* MGEDateFormatterTests.xctest */;
+			productReference = 32AD12E71D130254005A1677 /* NovemberTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -176,7 +176,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 32AD12C11D12FF78005A1677 /* Build configuration list for PBXProject "MGEDateFormatter" */;
+			buildConfigurationList = 32AD12C11D12FF78005A1677 /* Build configuration list for PBXProject "November" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -189,8 +189,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				32AD12C51D12FF78005A1677 /* MGEDateFormatter */,
-				32AD12E61D130254005A1677 /* MGEDateFormatterTests */,
+				32AD12C51D12FF78005A1677 /* November */,
+				32AD12E61D130254005A1677 /* NovemberTests */,
 			);
 		};
 /* End PBXProject section */
@@ -242,7 +242,7 @@
 /* Begin PBXTargetDependency section */
 		32AD12ED1D130254005A1677 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 32AD12C51D12FF78005A1677 /* MGEDateFormatter */;
+			target = 32AD12C51D12FF78005A1677 /* November */;
 			targetProxy = 32AD12EC1D130254005A1677 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -359,7 +359,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MGEDateFormatter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.manuege.MGEDateFormatter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manuege.november;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -372,7 +372,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MGEDateFormatter/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.manuege.MGEDateFormatter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.manuege.november;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
@@ -387,7 +387,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.manuege.MGEDateFormatterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MGEDateFormatter.app/MGEDateFormatter";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/November.app/November";
 			};
 			name = Debug;
 		};
@@ -400,14 +400,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.manuege.MGEDateFormatterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MGEDateFormatter.app/MGEDateFormatter";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/November.app/November";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		32AD12C11D12FF78005A1677 /* Build configuration list for PBXProject "MGEDateFormatter" */ = {
+		32AD12C11D12FF78005A1677 /* Build configuration list for PBXProject "November" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				32AD12D61D12FF79005A1677 /* Debug */,
@@ -416,7 +416,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		32AD12D81D12FF79005A1677 /* Build configuration list for PBXNativeTarget "MGEDateFormatter" */ = {
+		32AD12D81D12FF79005A1677 /* Build configuration list for PBXNativeTarget "November" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				32AD12D91D12FF79005A1677 /* Debug */,
@@ -425,7 +425,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		32AD12F01D130254005A1677 /* Build configuration list for PBXNativeTarget "MGEDateFormatterTests" */ = {
+		32AD12F01D130254005A1677 /* Build configuration list for PBXNativeTarget "NovemberTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				32AD12EE1D130254005A1677 /* Debug */,
