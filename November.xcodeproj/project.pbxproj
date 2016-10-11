@@ -67,8 +67,8 @@
 		32AD12BD1D12FF78005A1677 = {
 			isa = PBXGroup;
 			children = (
-				32AD12C81D12FF79005A1677 /* MGEDateFormatter */,
-				32AD12E81D130254005A1677 /* MGEDateFormatterTests */,
+				32AD12C81D12FF79005A1677 /* November */,
+				32AD12E81D130254005A1677 /* NovemberTests */,
 				32AD12C71D12FF79005A1677 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,7 +82,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		32AD12C81D12FF79005A1677 /* MGEDateFormatter */ = {
+		32AD12C81D12FF79005A1677 /* November */ = {
 			isa = PBXGroup;
 			children = (
 				32AD12C91D12FF79005A1677 /* AppDelegate.swift */,
@@ -94,7 +94,7 @@
 				32AD12D21D12FF79005A1677 /* LaunchScreen.storyboard */,
 				32AD12D51D12FF79005A1677 /* Info.plist */,
 			);
-			path = MGEDateFormatter;
+			path = November;
 			sourceTree = "<group>";
 		};
 		32AD12DE1D130047005A1677 /* MGEDateFormatter */ = {
@@ -107,13 +107,13 @@
 			path = MGEDateFormatter;
 			sourceTree = "<group>";
 		};
-		32AD12E81D130254005A1677 /* MGEDateFormatterTests */ = {
+		32AD12E81D130254005A1677 /* NovemberTests */ = {
 			isa = PBXGroup;
 			children = (
 				32AD12E91D130254005A1677 /* MGEDateFormatterTests.swift */,
 				32AD12EB1D130254005A1677 /* Info.plist */,
 			);
-			path = MGEDateFormatterTests;
+			path = NovemberTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
