@@ -16,7 +16,8 @@ Pod::Spec.new do |spec|
   spec.author    = "Manuel García-Estañ"
   spec.social_media_url   = "http://twitter.com/ManueGE"
 
-  spec.platform     = :ios, "8.0"
+  spec.ios.deployment_target  = '8.0'
+  spec.osx.deployment_target  = '10.13'
   spec.source       = { :git => "https://github.com/ManueGE/November.git", :tag => "#{spec.version}" }
 
   spec.requires_arc = true
