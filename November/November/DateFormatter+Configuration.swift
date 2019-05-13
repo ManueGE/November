@@ -91,7 +91,7 @@ public extension Date {
      - parameter locale: The locale used to perform the conversion. Default is `nil`, so the default location for `DateFormatter` will be used
      - returns: the string representation for the date using the given dateStyle, timeStyle and locale
      */
-    public func string(dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style, locale: Locale? = nil) -> String {
+    func string(dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style, locale: Locale? = nil) -> String {
         if let locale = locale {
             return string(with: .localizedStyle(dateStyle: dateStyle, timeStyle: timeStyle, locale: locale))
         }
@@ -107,7 +107,7 @@ public extension Date {
      - parameter locale: The locale used to perform the conversion. Default is `nil`, so the default location for `DateFormatter` will be used
      - returns: the string representation for the date using the given template and locale
      */
-    public func string(withTemplate template: String, locale: Locale? = nil) -> String {
+    func string(withTemplate template: String, locale: Locale? = nil) -> String {
         if let locale = locale {
             return string(with: .localizedTemplate(template: template, locale: locale))
         }
@@ -123,7 +123,7 @@ public extension Date {
      - parameter locale: The locale used to perform the conversion. Default is `nil`, so the default location for `DateFormatter` will be used
      - returns: the string representation for the date using the given format and locale
      */
-    public func string(withFormat format: String, locale: Locale? = nil) -> String {
+    func string(withFormat format: String, locale: Locale? = nil) -> String {
         if let locale = locale {
             return string(with: .localizedFormat(format: format, locale: locale))
         }
@@ -142,7 +142,7 @@ public extension Date {
      - parameter locale: The locale used to perform the conversion. Default is `nil`, so the default location for `DateFormatter` will be used
      - returns: the date instantiated with the given dateStyle, timeStyle and locale. Will return `nil` if the string couldn't be parsed
      */
-    public init?(string: String, dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style, locale: Locale? = nil) {
+    init?(string: String, dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style, locale: Locale? = nil) {
         if let locale = locale {
             self.init(string: string, configuration: .localizedStyle(dateStyle: dateStyle, timeStyle: timeStyle, locale: locale))
         }
@@ -158,7 +158,7 @@ public extension Date {
      - parameter locale: The locale used to perform the conversion. Default is `nil`, so the default location for `DateFormatter` will be used
      - returns: the date instantiated with the given template and locale. Will return `nil` if the string couldn't be parsed
      */
-    public init?(string: String, template: String, locale: Locale? = nil) {
+    init?(string: String, template: String, locale: Locale? = nil) {
         if let locale = locale {
             self.init(string: string, configuration: .localizedTemplate(template: template, locale: locale))
         }
@@ -174,7 +174,7 @@ public extension Date {
      - parameter locale: The locale used to perform the conversion. Default is `nil`, so the default location for `DateFormatter` will be used
      - returns: the date instantiated with the given format and locale. Will return `nil` if the string couldn't be parsed
      */
-    public init?(string: String, format: String, locale: Locale? = nil) {
+    init?(string: String, format: String, locale: Locale? = nil) {
         if let locale = locale {
             self.init(string: string, configuration: .localizedFormat(format: format, locale: locale))
         }
