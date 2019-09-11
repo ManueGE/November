@@ -24,6 +24,6 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
   spec.framework = "Foundation"
 
-  spec.source_files = "November/November/*.{swift}"
+  spec.source_files = "Sources/November/*.{swift}"
 
 end
