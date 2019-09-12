@@ -18,7 +18,7 @@ public extension Date {
      - parameter formatter: The provider of the `NSFormatter` used in the conversion
      - returns: the string representation of the date using the given configurator
      */
-    public func string(with formatter: DateFormatter) -> String {
+    func string(with formatter: DateFormatter) -> String {
         return formatter.string(from: self)
     }
     
@@ -28,7 +28,7 @@ public extension Date {
      - parameter formatter: The `NSFormatter` used in the conversion
      - returns: the date instantiated with the given string and the formatter. Will return `nil` if the string couldn't be parsed
      */
-    public init?(string: String, formatter: DateFormatter) {
+    init?(string: String, formatter: DateFormatter) {
         guard let date = formatter.date(from: string) else { return nil }
         self.init(timeIntervalSince1970: date.timeIntervalSince1970)
     }

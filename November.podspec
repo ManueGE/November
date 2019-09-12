@@ -18,11 +18,12 @@ Pod::Spec.new do |spec|
 
   spec.ios.deployment_target  = '8.0'
   spec.osx.deployment_target  = '10.13'
+  spec.tvos.deployment_target  = '11.2'
   spec.source       = { :git => "https://github.com/ManueGE/November.git", :tag => "#{spec.version}" }
 
   spec.requires_arc = true
   spec.framework = "Foundation"
 
-  spec.source_files = "November/November/*.{swift}"
+  spec.source_files = "Sources/November/*.{swift}"
 
 end

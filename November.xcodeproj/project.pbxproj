@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3222AA4C1D172DB300029DFE /* Date+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3222AA4B1D172DB300029DFE /* Date+DateFormatter.swift */; };
 		32AD12CA1D12FF79005A1677 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12C91D12FF79005A1677 /* AppDelegate.swift */; };
 		32AD12CC1D12FF79005A1677 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12CB1D12FF79005A1677 /* ViewController.swift */; };
 		32AD12CF1D12FF79005A1677 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32AD12CD1D12FF79005A1677 /* Main.storyboard */; };
 		32AD12D11D12FF79005A1677 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32AD12D01D12FF79005A1677 /* Assets.xcassets */; };
 		32AD12D41D12FF79005A1677 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32AD12D21D12FF79005A1677 /* LaunchScreen.storyboard */; };
-		32AD12E01D130052005A1677 /* DateFormatterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12DF1D130052005A1677 /* DateFormatterProvider.swift */; };
-		32AD12E21D1300E7005A1677 /* DateFormatter+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12E11D1300E7005A1677 /* DateFormatter+Configuration.swift */; };
 		32AD12EA1D130254005A1677 /* NovemberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12E91D130254005A1677 /* NovemberTests.swift */; };
-		32AD12F21D132853005A1677 /* NSDate+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32AD12F11D132853005A1677 /* NSDate+App.swift */; };
+		8D3C83FC23294B76001BF178 /* Date+DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C83F823294B76001BF178 /* Date+DateFormatter.swift */; };
+		8D3C83FD23294B76001BF178 /* NSDate+App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C83F923294B76001BF178 /* NSDate+App.swift */; };
+		8D3C83FE23294B76001BF178 /* DateFormatter+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C83FA23294B76001BF178 /* DateFormatter+Configuration.swift */; };
+		8D3C83FF23294B76001BF178 /* DateFormatterProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3C83FB23294B76001BF178 /* DateFormatterProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +30,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3222AA4B1D172DB300029DFE /* Date+DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+DateFormatter.swift"; sourceTree = "<group>"; };
 		32AD12C61D12FF79005A1677 /* November.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = November.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AD12C91D12FF79005A1677 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		32AD12CB1D12FF79005A1677 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,12 +37,13 @@
 		32AD12D01D12FF79005A1677 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32AD12D31D12FF79005A1677 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32AD12D51D12FF79005A1677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		32AD12DF1D130052005A1677 /* DateFormatterProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatterProvider.swift; sourceTree = "<group>"; };
-		32AD12E11D1300E7005A1677 /* DateFormatter+Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Configuration.swift"; sourceTree = "<group>"; };
 		32AD12E71D130254005A1677 /* NovemberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NovemberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AD12E91D130254005A1677 /* NovemberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NovemberTests.swift; sourceTree = "<group>"; };
 		32AD12EB1D130254005A1677 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		32AD12F11D132853005A1677 /* NSDate+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+App.swift"; sourceTree = "<group>"; };
+		8D3C83F823294B76001BF178 /* Date+DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Date+DateFormatter.swift"; path = "Sources/November/Date+DateFormatter.swift"; sourceTree = SOURCE_ROOT; };
+		8D3C83F923294B76001BF178 /* NSDate+App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NSDate+App.swift"; path = "Sources/November/NSDate+App.swift"; sourceTree = SOURCE_ROOT; };
+		8D3C83FA23294B76001BF178 /* DateFormatter+Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DateFormatter+Configuration.swift"; path = "Sources/November/DateFormatter+Configuration.swift"; sourceTree = SOURCE_ROOT; };
+		8D3C83FB23294B76001BF178 /* DateFormatterProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatterProvider.swift; path = Sources/November/DateFormatterProvider.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,24 +85,16 @@
 		32AD12C81D12FF79005A1677 /* November */ = {
 			isa = PBXGroup;
 			children = (
+				8D3C83F823294B76001BF178 /* Date+DateFormatter.swift */,
+				8D3C83FA23294B76001BF178 /* DateFormatter+Configuration.swift */,
+				8D3C83FB23294B76001BF178 /* DateFormatterProvider.swift */,
+				8D3C83F923294B76001BF178 /* NSDate+App.swift */,
 				32AD12C91D12FF79005A1677 /* AppDelegate.swift */,
 				32AD12CB1D12FF79005A1677 /* ViewController.swift */,
-				32AD12F11D132853005A1677 /* NSDate+App.swift */,
-				32AD12DE1D130047005A1677 /* November */,
 				32AD12CD1D12FF79005A1677 /* Main.storyboard */,
 				32AD12D01D12FF79005A1677 /* Assets.xcassets */,
 				32AD12D21D12FF79005A1677 /* LaunchScreen.storyboard */,
 				32AD12D51D12FF79005A1677 /* Info.plist */,
-			);
-			path = November;
-			sourceTree = "<group>";
-		};
-		32AD12DE1D130047005A1677 /* November */ = {
-			isa = PBXGroup;
-			children = (
-				3222AA4B1D172DB300029DFE /* Date+DateFormatter.swift */,
-				32AD12DF1D130052005A1677 /* DateFormatterProvider.swift */,
-				32AD12E11D1300E7005A1677 /* DateFormatter+Configuration.swift */,
 			);
 			path = November;
 			sourceTree = "<group>";
@@ -161,25 +153,25 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = manuege;
 				TargetAttributes = {
 					32AD12C51D12FF78005A1677 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = CF864KN2XE;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					32AD12E61D130254005A1677 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = CF864KN2XE;
 						DevelopmentTeamName = "Manuel Garcia-Estan Martinez";
+						LastSwiftMigration = 1020;
 						TestTargetID = 32AD12C51D12FF78005A1677;
 					};
 				};
 			};
 			buildConfigurationList = 32AD12C11D12FF78005A1677 /* Build configuration list for PBXProject "November" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -221,11 +213,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32AD12F21D132853005A1677 /* NSDate+App.swift in Sources */,
-				3222AA4C1D172DB300029DFE /* Date+DateFormatter.swift in Sources */,
-				32AD12E21D1300E7005A1677 /* DateFormatter+Configuration.swift in Sources */,
+				8D3C83FC23294B76001BF178 /* Date+DateFormatter.swift in Sources */,
 				32AD12CC1D12FF79005A1677 /* ViewController.swift in Sources */,
-				32AD12E01D130052005A1677 /* DateFormatterProvider.swift in Sources */,
+				8D3C83FE23294B76001BF178 /* DateFormatter+Configuration.swift in Sources */,
+				8D3C83FF23294B76001BF178 /* DateFormatterProvider.swift in Sources */,
+				8D3C83FD23294B76001BF178 /* NSDate+App.swift in Sources */,
 				32AD12CA1D12FF79005A1677 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,7 +312,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -368,7 +360,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -378,12 +370,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = CF864KN2XE;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = November/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.manuege.november;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -392,13 +385,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = CF864KN2XE;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = November/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.manuege.november;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -410,7 +404,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.manuege.november-tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/November.app/November";
 			};
 			name = Debug;
@@ -424,7 +417,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.manuege.november-tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 4.2;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/November.app/November";
 			};
 			name = Release;
